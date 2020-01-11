@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minimumValue="50" maximumValue="1000" stepValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="UDn-67-5KD">
-                                <rect key="frame" x="20" y="728" width="94" height="32"/>
+                                <rect key="frame" x="290" y="676" width="94" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -34,8 +34,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZQ-u9-lux">
                                 <rect key="frame" x="132" y="547" width="145" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Play"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="spinBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qHL-gp-Ic4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sd-bT-jnm">
                                 <rect key="frame" x="333" y="728" width="61" height="40"/>
@@ -44,17 +49,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TW0-gj-93c">
-                                <rect key="frame" x="17" y="347" width="380" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="wiE-9f-xIE">
+                                <rect key="frame" x="14" y="104" width="386" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="slotmachine" translatesAutoresizingMaskIntoConstraints="NO" id="obu-m9-Sfe">
+                                <rect key="frame" x="27" y="240" width="402" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUr-oq-uvv">
+                                <rect key="frame" x="81" y="372" width="65" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28I-EG-yPH">
+                                <rect key="frame" x="165" y="372" width="65" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Opp-QN-YqM">
+                                <rect key="frame" x="250" y="372" width="65" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.25842654705047607" green="0.78687542676925659" blue="0.66670161485671997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.39778983160621761" green="0.10787902258449371" blue="0.072983237222279784" alpha="0.79811289612676062" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="betView" destination="zc4-yv-pbz" id="aAV-bB-amu"/>
                         <outlet property="cashBet" destination="UDn-67-5KD" id="c1i-iu-umq"/>
+                        <outlet property="imageVIew1" destination="AUr-oq-uvv" id="UPe-e8-pvd"/>
+                        <outlet property="imageView2" destination="28I-EG-yPH" id="ruy-wh-GyA"/>
+                        <outlet property="imageView3" destination="Opp-QN-YqM" id="Umn-gb-aZp"/>
                         <outlet property="myCash" destination="4sd-bT-jnm" id="ahs-1X-Wf5"/>
                     </connections>
                 </viewController>
@@ -63,4 +87,8 @@
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="banner" width="787" height="400"/>
+        <image name="slotmachine" width="148" height="98.5"/>
+    </resources>
 </document>

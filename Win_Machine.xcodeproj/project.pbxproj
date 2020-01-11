@@ -15,6 +15,7 @@
 		EA1EBFB023C6C46300247502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1EBFAE23C6C46300247502 /* LaunchScreen.storyboard */; };
 		EA1EBFBB23C6C46300247502 /* Win_MachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1EBFBA23C6C46300247502 /* Win_MachineTests.swift */; };
 		EA1EBFC623C6C46300247502 /* Win_MachineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1EBFC523C6C46300247502 /* Win_MachineUITests.swift */; };
+		FF53571E23CA719500877E49 /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = FF53571D23CA719500877E49 /* banner.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		EA1EBFC123C6C46300247502 /* Win_MachineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Win_MachineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1EBFC523C6C46300247502 /* Win_MachineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Win_MachineUITests.swift; sourceTree = "<group>"; };
 		EA1EBFC723C6C46300247502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF53571D23CA719500877E49 /* banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = banner.png; path = ../../../Downloads/banner.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				EA1EBFA523C6C46200247502 /* SceneDelegate.swift */,
 				EA1EBFA723C6C46200247502 /* ViewController.swift */,
 				EA1EBFA923C6C46200247502 /* Main.storyboard */,
+				FF53571D23CA719500877E49 /* banner.png */,
 				EA1EBFAC23C6C46300247502 /* Assets.xcassets */,
 				EA1EBFAE23C6C46300247502 /* LaunchScreen.storyboard */,
 				EA1EBFB123C6C46300247502 /* Info.plist */,
@@ -235,6 +238,7 @@
 				EA1EBFB023C6C46300247502 /* LaunchScreen.storyboard in Resources */,
 				EA1EBFAD23C6C46300247502 /* Assets.xcassets in Resources */,
 				EA1EBFAB23C6C46200247502 /* Main.storyboard in Resources */,
+				FF53571E23CA719500877E49 /* banner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

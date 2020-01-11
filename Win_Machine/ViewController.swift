@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var betView: UILabel!
     @IBOutlet weak var cashBet: UIStepper!
+    
+    @IBOutlet weak var imageVIew1: UIImageView!
+    @IBOutlet weak var imageView2: UIImageView!
+    @IBOutlet weak var imageView3: UIImageView!
     
     @IBAction func cashBetter(_ sender: UIStepper) {
         cashBet.maximumValue = Double(currentCash)
@@ -25,6 +30,15 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func spinBtn(_ sender: UIButton) {
+        
+        imageVIew1.animationImages = [#imageLiteral(resourceName: "gohan"),#imageLiteral(resourceName: "godofotherplanet"),#imageLiteral(resourceName: "goku"),#imageLiteral(resourceName: "blackgoku"),#imageLiteral(resourceName: "Kaeli")]
+        imageVIew1.animationDuration =  1
+        imageVIew1.startAnimating()
+        imageVIew1.animationRepeatCount = 0 // default value
+        //imageVIew1.stopAnimating()
+
+    }
     var cashBack : Int = 10{
         didSet{//update ui
             betView.text = "\(currentCash)$"
@@ -35,6 +49,7 @@ class ViewController: UIViewController {
            super.viewDidLoad()
            // Do any additional setup after loading the view.
        }
+   
     
     @IBOutlet weak var myCash: UILabel!
     var currentCash : Int{
@@ -61,6 +76,11 @@ class ViewController: UIViewController {
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return images[component].size.height + 1
     }
+    
+    
+}
+
+extension CATransition {
     
     
 }

@@ -10,11 +10,58 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    let images = [#imageLiteral(resourceName: "Kaeli"),#imageLiteral(resourceName: "gohan"),#imageLiteral(resourceName: "godofotherplanet"),#imageLiteral(resourceName: "vegeta"),#imageLiteral(resourceName: "goku")]
+
+    @IBOutlet weak var betView: UILabel!
+    @IBOutlet weak var cashBet: UIStepper!
+    
+    @IBAction func cashBetter(_ sender: UIStepper) {
+        cashBet.maximumValue = Double(currentCash)
+        let amount = Int(sender.value)
+        if currentCash >= amount {
+            cashBack = amount
+            betView.text = "\(amount)"
+        }
     }
-
-
+    
+    var cashBack : Int = 10{
+        didSet{//update ui
+            betView.text = "\(currentCash)$"
+        }
+    }
+    
+    override func viewDidLoad() {
+           super.viewDidLoad()
+           // Do any additional setup after loading the view.
+       }
+    
+    @IBOutlet weak var myCash: UILabel!
+    var currentCash : Int{
+          guard let cash = myCash.text, !(myCash.text?.isEmpty)! else {
+              return 0
+          }
+          return Int(cash.replacingOccurrences(of: "$", with: ""))!
+      }
+    
+    //MARK: - UIPickerView
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 3
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return images.count * 10
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let index = row % images.count
+        return UIImageView(image: images[index])
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return images[component].size.height + 1
+    }
+    
+    
 }
 
